@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<ol class="breadcrumb">
+    <li><a href="?">CutIt</a></li>
+    <li><a href="?site={{site}}">{{site}}</a></li>
+    <li><a target='_blank' href="{{url}}">{{url}}</a></li>
+</ol>
+{{ content.html()|raw }}
+
+{% endblock %}

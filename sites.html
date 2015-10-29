@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{{ url }}
+<ul class="list-group">
+  {% for site, _ in sites %}
+      <li class="list-group-item">
+          <a href="?site={{site}}"> {{ site }} </a>
+      </li>
+  {% else %}
+      No items have been found.
+  {% endfor %}
+</ul>
+{% endblock %}
